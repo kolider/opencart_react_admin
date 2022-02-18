@@ -1,7 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from "./components/Login/Login";
+import {Route, Routes} from "react-router-dom";
+import OrdersListContainer from "./components/Orders/OrdersContainer";
+import Order from "./components/Order";
+import PrivateOutlet from "./helpers/PrivateOutlet";
+import LoginContainer from "./components/Login/LoginContainer";
 
-function App() {
+const App = () => {
+    return (
+        <Routes>
+            <Route path="/login" element={<LoginContainer/>}/>
+            <Route path="/" element={<PrivateOutlet/>}>
+                <Route path="orders" element={<OrdersListContainer />}/>
+                <Route path="orders/:orderId" element={<Order/>}/>
+            </Route>
+        </Routes>
+    )
+}
+
+
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +38,6 @@ function App() {
       </header>
     </div>
   );
-}
+}*/
 
 export default App;

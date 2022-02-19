@@ -1,6 +1,5 @@
 import './App.css';
-import Login from "./components/Login/Login";
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import OrdersListContainer from "./components/Orders/OrdersContainer";
 import Order from "./components/Order";
 import PrivateOutlet from "./helpers/PrivateOutlet";
@@ -14,6 +13,7 @@ const App = () => {
                 <Route path="orders" element={<OrdersListContainer />}/>
                 <Route path="orders/:orderId" element={<Order/>}/>
             </Route>
+            <Route path="*" element={<Navigate to="/login" replace/>}/>
         </Routes>
     )
 }

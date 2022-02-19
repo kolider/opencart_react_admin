@@ -19,8 +19,10 @@
 .env.production.local
 
 npm-debug.log*
+yarn.lock
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
 
 # ide temp folder
 .idea

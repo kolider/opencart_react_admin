@@ -15,16 +15,16 @@ const saveToStorage = (fields) => {
 //     return localStorage.getItem(field) || ''
 // }
 
-const getFromStorage = () => {
-    return {
-        isLogged: getFromStorage("isLogged") || false,
-        isFetching: false,
-        isIncorrectCredentials: false,
-        email: getFromStorage("email") || '',
-        name: '',
-        token: getFromStorage("token") || '',
-    }
-}
+// const getFromStorage = () => {
+//     return {
+//         isLogged: getFromStorage("isLogged") || false,
+//         isFetching: false,
+//         isIncorrectCredentials: false,
+//         email: getFromStorage("email") || '',
+//         name: '',
+//         token: getFromStorage("token") || '',
+//     }
+// }
 
 let initialState = {
     isInit: false,
